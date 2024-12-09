@@ -18,21 +18,41 @@ page = st.sidebar.selectbox(
 
 # Charger les données (exemple)
 @st.cache
-def load_data():
+#def load_data():
     # Remplacez ceci par le chargement réel de vos données
-    return pd.DataFrame({
-        "abstract": [
-            "Heart disease treatment",
-            "Diabetes prevention study",
-            "Cancer immunotherapy",
-            "Ophthalmology and vision",
-            "Cardiology and blood pressure",
-        ],
-        "category": ["Cardiology", "Endocrinology", "Oncology", "Ophthalmology", "Cardiology"],
-        "length": [120, 85, 200, 110, 95]
-    })
+#    return pd.DataFrame({
+#        "abstract": [
+#            "Heart disease treatment",
+#            "Diabetes prevention study",
+#            "Cancer immunotherapy",
+#            "Ophthalmology and vision",
+#            "Cardiology and blood pressure",
+#        ],
+#        "category": ["Cardiology", "Endocrinology", "Oncology", "Ophthalmology", "Cardiology"],
+#        "length": [120, 85, 200, 110, 95]
+#    })
 
-df = load_data()
+@st.cache
+def load_data_from_github(url: str):
+    """
+    Load data from a CSV file hosted on GitHub.
+
+    Parameters:
+    - url (str): The raw URL of the CSV file in the GitHub repository.
+
+    Returns:
+    - pd.DataFrame: Loaded DataFrame.
+    """
+    try:
+        data = pd.read_csv(url)
+        return data
+    except Exception as e:
+        st.error(f"An error occurred while loading the data: {e}")
+        return pd.DataFrame()  # Return an empty DataFrame if an error occurs
+
+
+
+df = load_data("MuchMoreData.csv")
 
 # Accueil
 if page == "Accueil":
