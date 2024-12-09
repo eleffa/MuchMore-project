@@ -52,7 +52,7 @@ def load_data_from_github(url: str):
 
 
 
-df = load_data("/mount/src/muchmore-project/MuchMoreData.csv")
+df = load_data("https://github.com/eleffa/MuchMore-project/blob/main/MuchMoreData.csv")
 
 # Accueil
 if page == "Accueil":
