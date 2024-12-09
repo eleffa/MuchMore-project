@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.svm import LinearSVC
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import classification_report, confusion_matrix, precision_recall_fscore_support
+#from sklearn.feature_extraction.text import TfidfVectorizer
+#from sklearn.model_selection import train_test_split
+#from sklearn.svm import LinearSVC
+#from sklearn.naive_bayes import MultinomialNB
+#from sklearn.metrics import classification_report, confusion_matrix, precision_recall_fscore_support
 
 # Charger les données
 @st.cache
