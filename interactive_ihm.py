@@ -84,7 +84,7 @@ elif model_choice == 'Naive Bayes':
     #y_pred = y_pred_nb
 
 # Documents mal classés
-misclassified = X_test[np.where(y_pred != y_test)]
+#misclassified = X_test[np.where(y_pred != y_test)]
 st.write("Exemples de documents mal classés :")
 for i, doc in enumerate(misclassified[:5]):
     st.write(f"**Document {i+1} :** {tfidf.inverse_transform(doc)}")
@@ -93,16 +93,16 @@ for i, doc in enumerate(misclassified[:5]):
 # Visualisation des performances
 st.subheader("Performances des modèles")
 metrics = ['precision', 'recall', 'f1-score']
-svm_scores = [svm_report['weighted avg'][metric] for metric in metrics]
-nb_scores = [nb_report['weighted avg'][metric] for metric in metrics]
+#svm_scores = [svm_report['weighted avg'][metric] for metric in metrics]
+#nb_scores = [nb_report['weighted avg'][metric] for metric in metrics]
 
 # Comparaison graphique
 labels = ['Precision', 'Recall', 'F1-Score']
 x = np.arange(len(labels))
 width = 0.35
 fig, ax = plt.subplots()
-ax.bar(x - width/2, svm_scores, width, label="SVM")
-ax.bar(x + width/2, nb_scores, width, label="Naive Bayes")
+#ax.bar(x - width/2, svm_scores, width, label="SVM")
+#ax.bar(x + width/2, nb_scores, width, label="Naive Bayes")
 ax.set_xticks(x)
 ax.set_xticklabels(labels)
 ax.legend()
