@@ -27,10 +27,10 @@ def load_data():
 df = load_data()
 
 # Prétraitement des données
-tfidf = TfidfVectorizer(max_features=500)
-X = tfidf.fit_transform(df['abstract'])
-y = df['clean_category']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
+#tfidf = TfidfVectorizer(max_features=500)
+#X = tfidf.fit_transform(df['abstract'])
+#y = df['clean_category']
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
 
 # Entraînement des modèles
 @st.cache
@@ -71,17 +71,17 @@ C_value = st.sidebar.slider("Coefficient de régularisation (C) - SVM", 0.1, 10.
 alpha_value = st.sidebar.slider("Smoothing Parameter (alpha) - Naive Bayes", 0.1, 10.0, 1.0, step=0.1)
 
 # Entraînement des modèles avec paramètres ajustés
-svm, nb, y_pred_svm, y_pred_nb, svm_report, nb_report = train_models(C=C_value, alpha=alpha_value)
+#svm, nb, y_pred_svm, y_pred_nb, svm_report, nb_report = train_models(C=C_value, alpha=alpha_value)
 
 # Exploration des prédictions
 st.subheader("Exploration des prédictions")
 model_choice = st.radio("Choisissez un modèle pour voir les prédictions", ['SVM', 'Naive Bayes'])
 if model_choice == 'SVM':
     st.write("Prédictions du modèle SVM :")
-    y_pred = y_pred_svm
+     #y_pred = y_pred_svm
 elif model_choice == 'Naive Bayes':
     st.write("Prédictions du modèle Naive Bayes :")
-    y_pred = y_pred_nb
+    #y_pred = y_pred_nb
 
 # Documents mal classés
 misclassified = X_test[np.where(y_pred != y_test)]
