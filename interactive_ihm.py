@@ -195,7 +195,7 @@ elif page == "Exploration Interactive":
     st.write("Exemples de documents mal classés :")
     for i, doc in enumerate(misclassified[:5]):
         st.write(f"**Document {i+1} :** {tfidf.inverse_transform(doc)}")
-        st.write(f"**Document {i+1} : **{df['content'].iloc[i]}")
+        st.write(f"**Document {i+1} : **{df['content'].iloc[i+1]}")
         st.write(f"**Classe réelle :** {y_test.iloc[i]} | **Classe prédite :** {y_pred[i]}")
 
     # Visualisation des performances
