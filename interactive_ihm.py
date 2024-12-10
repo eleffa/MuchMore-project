@@ -74,26 +74,15 @@ if page == "Accueil":
 
 # Dashboard
 elif page == "Dashboard":
-    st.title("Dashboard 📊")
+    st.title("Dashboard - Classification des Abstracts Médicaux 📊")
     st.sidebar.success("Vous êtes sur la page Dashboard.")
 
-    # Distribution des longueurs
-    st.subheader("Distribution des longueurs des abstracts")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    df['length'].hist(bins=10, ax=ax, color='skyblue', edgecolor='black')
-    ax.set_title("Distribution des longueurs des abstracts")
-    ax.set_xlabel("Longueur")
-    ax.set_ylabel("Fréquence")
-    st.pyplot(fig)
-
-    # Distribution des catégories
-    st.subheader("Distribution des catégories")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    df['category'].value_counts().plot(kind='bar', ax=ax, color='orange', edgecolor='black')
-    ax.set_title("Distribution des catégories")
-    ax.set_xlabel("Catégorie")
-    ax.set_ylabel("Fréquence")
-    st.pyplot(fig)
+    # Section 1 : Vue d'ensemble
+    st.header("Vue d'ensemble")
+    st.write("Résumé des données")
+    # Exemple : ajouter des statistiques clés
+    st.metric("Total Abstracts", 7823)
+    st.metric("Nombre de Classes", 39)
 
 # Exploration Interactive
 elif page == "Exploration Interactive":
