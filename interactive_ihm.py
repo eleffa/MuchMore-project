@@ -85,36 +85,36 @@ elif page == "Dashboard":
     st.metric("Nombre de Classes", 39)
 
     # Ajouter un diagramme de distribution des classes (importer une image générée)
-    image_classes = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/distribution_categories.png")
+    image_classes = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/distribution_categories.png")
     st.image(image_classes, caption="Distribution des Classes")
 
     # Section 2 : Analyse exploratoire
     st.header("Analyse exploratoire")
     st.subheader("Histogramme des longueurs")
-    image_lengths = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/distribution_longueur.png")
+    image_lengths = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/distribution_longueur.png")
     st.image(image_lengths, caption="Distribution des longueurs des abstracts")
 
     st.subheader("Nuage de mots")
-    image_heatmap = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/nuage_de_mots.png")
+    image_heatmap = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/nuage_de_mots.png")
     st.image(image_heatmap, caption="Nuage de mots")
 
     st.subheader("Heatmap de similarité")
-    image_heatmap = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/heatmap_similarite.png")
+    image_heatmap = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/heatmap_similarite.png")
     st.image(image_heatmap, caption="Similarité entre catégories")
 
     # Section 3 : Modélisation
     st.header("Modélisation")
 
     st.subheader("Graphique radar")
-    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/radar.png")
+    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/radar.png")
     st.image(image_roc, caption="Graphique radar")
 
     st.subheader("Comparaison des Scores Moyens par Modèle")
-    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/comparaison_des_scores.png")
+    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/comparaison_des_scores.png")
     st.image(image_roc, caption="Comparaison des Scores Moyens par Modèle")
 
     st.subheader("Courbes ROC/AUC")
-    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/dashboard/courbe_roc.png")
+    image_roc = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/courbe_roc.png")
     st.image(image_roc, caption="Courbes ROC - SVM vs Naive Bayes")
     
 
