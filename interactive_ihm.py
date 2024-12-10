@@ -110,6 +110,14 @@ elif page == "Dashboard":
     st.subheader("Comparaison des Scores Moyens par Modèle")
     st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/comparaison_des_scores.png", caption="Comparaison des Scores Moyens par Modèle")
 
+
+    st.subheader("Matrice de confusion - SVM")
+    st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/confusion_svm.png", caption="Matrice de confusion - SVM")
+
+    st.subheader("Matrice de confusion - Naive Bayes")
+    st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/confusion_naive.png", caption="Matrice de confusion - Naive Bayes")
+
+    
     st.subheader("Courbes ROC/AUC")
     st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/courbe_roc.png", caption="Courbes ROC - SVM vs Naive Bayes")
     
