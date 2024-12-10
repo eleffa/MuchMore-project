@@ -162,13 +162,13 @@ elif page == "Exploration Interactive":
     # Tableau interactif
     st.subheader("Exploration des données")
     filter_category = st.selectbox("Filtrer par catégorie", options=['Toutes'] + list(df['clean_category'].unique()))
-    filter_language = st.selectbox("Filtrer par langue", options=['Toutes'] + list(df['language'].unique()))
+    filter_language = st.selectbox("Filtrer par langue", options=['Toutes'] + list(df['lang'].unique()))
 
     filtered_data = df.copy()
     if filter_category != 'Toutes':
         filtered_data = filtered_data[filtered_data['clean_category'] == filter_category]
     if filter_language != 'Toutes':
-        filtered_data = filtered_data[filtered_data['language'] == filter_language]
+        filtered_data = filtered_data[filtered_data['lang'] == filter_language]
 
     st.write("Données filtrées :", filtered_data)
 
