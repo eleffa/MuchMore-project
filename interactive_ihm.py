@@ -137,7 +137,7 @@ elif page == "Exploration Interactive":
 
     # Prétraitement des données
     tfidf = TfidfVectorizer(max_features=500)
-    X = tfidf.fit_transform(df['abstract'])
+    X = tfidf.fit_transform(df['clean_content'])
     y = df['clean_category']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y, random_state=42)
 
