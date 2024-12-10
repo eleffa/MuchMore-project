@@ -85,7 +85,7 @@ elif page == "Dashboard":
     st.metric("Nombre de Classes", 39)
 
     # Ajouter un diagramme de distribution des classes (importer une image générée)
-    st.image("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/distribution_categories.png",
+    st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/distribution_categories.png",
     caption="Distribution des Classes", use_column_width=True)
 
     # Section 2 : Analyse exploratoire
