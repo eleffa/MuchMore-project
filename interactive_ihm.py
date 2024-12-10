@@ -127,15 +127,9 @@ elif page == "Exploration Interactive":
     st.title("Exploration Interactive 🕵️")
     st.sidebar.success("Vous êtes sur la page Exploration Interactive.")
 
-    # Tableau interactif
-    st.subheader("Tableau interactif des données")
-    filter_category = st.selectbox("Filtrer par catégorie", options=["Toutes"] + df['category'].unique().tolist())
-    if filter_category != "Toutes":
-        filtered_df = df[df['category'] == filter_category]
-    else:
-        filtered_df = df
+   
 
-    st.write("Données filtrées :", filtered_df)
+    
 
     # Analyse de prédictions (exemple fictif)
     st.subheader("Exploration des prédictions mal classées")
