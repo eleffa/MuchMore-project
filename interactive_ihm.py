@@ -91,8 +91,8 @@ elif page == "Dashboard":
     # Section 2 : Analyse exploratoire
     st.header("Analyse exploratoire")
     st.subheader("Histogramme des longueurs")
-    image_lengths = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/distribution_longueur.png")
-    st.image(image_lengths, caption="Distribution des longueurs des abstracts")
+    st.image("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/dashboard/distribution_longueur.png", caption="Distribution des longueurs des abstracts")
+    
 
     st.subheader("Nuage de mots")
     image_heatmap = Image.open("https://github.com/eleffa/MuchMore-project/tree/main/dashboard/nuage_de_mots.png")
