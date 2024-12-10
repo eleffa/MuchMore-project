@@ -52,7 +52,7 @@ def load_data_from_github(url: str):
 
 
 
-df = load_data_from_github("https://raw.githubusercontent.comeleffa/MuchMore-project/main/MuchMoreData_clean.csv")
+df = load_data_from_github("https://raw.githubusercontent.com/eleffa/MuchMore-project/main/MuchMoreData_clean.csv")
 
 # Accueil
 if page == "Accueil":
